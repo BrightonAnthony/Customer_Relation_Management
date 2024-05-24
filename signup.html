@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<style>
+body{
+    background-image: url("https://i.pinimg.com/564x/c3/1b/84/c31b84b0e3ed7113c9b447c86cf5701c.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+.center{
+    width: 410px;
+    height: 400px;
+    background-color: rgba(0, 0, 0, 0.2);
+    position: absolute;
+    margin-left: 410px;
+    margin-top: 100px;
+    border-radius: 20px;
+    padding-top: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: left;
+    color: rgb(10, 0, 0);
+    font-family: 'Times New Roman', Times, serif;
+}
+#submit{
+    text-align: center;
+    font-size: 25px;
+    font-weight: bolder;
+    border-width: 2px;
+}
+.btn-link{
+    color: aliceblue;
+}
+#btn{
+    color: aliceblue;
+}
+</style>
+    <form action="connection.php" method="post" >
+        
+        <div class ="center">
+            <div class="form-floating mb-3">
+                <input type="email" class="form-control" id="floatingInput" name="email" placeholder="Email address">
+                <label for="floatingInput">Email address</label>
+            </div><br>
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="floatingInput" name="username" placeholder="Username">
+                <label for="floatingInput">Username</label>
+            </div><br>
+            <div class="form-floating">
+                <input type="password" class="form-control" id="floatingPassword" name="password" placeholder="Password" >
+                <label for="floatingPassword">Password</label>
+            </div><br>
+            <div align="center">
+                <button type="submit" name="submit" class="btn btn-outline-success btn-lg" id="submit" value="submit">Sign Up</button>
+            </div>
+            <div align="center">
+            <a href="index.html"><button type="button" class="btn btn-link" id="btn">Aldready have an Account!</button></a>
+            </div>
+        </div>
+    </form>
+    
+<script>
+
+
+</script>
+</body>
+</html>

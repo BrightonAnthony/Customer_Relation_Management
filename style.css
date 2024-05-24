@@ -1,0 +1,68 @@
+
+.tit{
+    text-align: left;
+    color: black;
+    background-color: rgb(148, 148, 150);
+    padding: 10px;
+    padding-left: 20px;
+    border-color: black;
+    border: 0px;
+    border-bottom: 5px;
+    border-style: solid;
+}
+
+.bod1{
+    text-align: left;
+    color: black;
+    background-color: rgb(148, 148, 150);
+    padding: 1px;
+    padding-left: 40px;
+    border-color: black;
+    border: 0px;
+    border-bottom: 5px;
+    border-style: solid;
+}
+
+.bod2{
+    text-align: left;
+   /* font-size: 20px;*/
+    padding-left: 70px;
+    
+}
+
+.fot{
+    text-align: right;
+    color: black;
+    background-color: rgb(148, 148, 150);
+    padding: 10px;
+    padding-right: 20px;
+    border-color: black;
+    border: 0px;
+    border-bottom: 5px;
+    border-style: solid;
+}
+
+input[type=text], input[type=date], input[type=number], select{
+    width: 50%;
+    height: 40px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    
+}
+
+input[type=button], input[type=submit]{
+    width: 10%;
+    height: 50px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+textarea{
+    width: 50%;
+    height: 40px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: content-box;
+}

@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Relation Management</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link href="add.css" rel="stylesheet">
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+    }
+    header{
+        color: white;
+        background-color: rgb(203, 105, 18);
+        height: 90px;
+        margin-bottom: 1px;
+        margin-right: 2px;
+    }
+    .sticky-top ul{
+        display: inline-flex;
+        list-style: none;
+        
+    }
+    .imgs{
+        padding: 15px;
+    }
+    h1{
+        padding-top: 15px;
+        font-family: 'Times New Roman', Times, serif;
+        
+    }
+    .input-group{
+        padding-left: 250px;
+        padding-top: 25px;
+    }
+    .bi-1{
+        font-size: 18px;
+        height: 25px;
+        color: rgb(240, 238, 238);
+        
+    }
+    .input-group-text{
+        background-color: rgb(203, 105, 18);
+        border-color:  rgb(226, 223, 220);
+    }
+    .searc{
+        font-size: 15px;
+        height: 35px;
+        width: 280px;
+    }
+    .buton{
+        padding-top: 25px;
+        padding-left: 390px;
+    }
+    .buton-2{
+        padding-top: 25px;
+    }
+    .bi{
+        font-size: 27px;
+        cursor: pointer;
+    }
+    .menu{
+        color: white;
+        background-color: rgb(187, 188, 187);
+        height: 512px;
+        width: 160px;
+        position: sticky;
+        margin-right: 1px;
+    }
+    
+    .add{
+        display: none;
+    }
+    .sticky-top ul li:hover .add{
+        display: block;
+        position: absolute;
+        background-color: rgb(50, 54, 50);
+        margin-top: 5px;
+        margin-left: -95px;
+        
+    }
+    .sticky-top ul li:hover .add ul{
+        display: block;
+        margin: 10px;
+    }
+    .sticky-top ul li:hover .add ul li{
+        width: 200px;
+        padding: 3px;    
+        cursor: pointer;
+    }
+    .bi-2{
+        font-size: 17px;
+        cursor: pointer;
+    }
+    a{
+        text-decoration: none;
+        color: white;
+    }
+    .home{
+        height: 80px;
+        width: 160px;
+        border: none;
+        margin-bottom: 1px;
+        margin-top: 1px;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: bold;
+        font-size: 23px;
+    }
+    .home:hover {
+        background-color: rgb(118, 121, 118);
+    }
+    .bar{
+        display: inline-flex;
+    }
+    .cont{
+        height: 512px;
+        display: flex;
+        flex-direction: column;
+        gap: 1px;
+        width: 1116px;
+    }
+    .nav{
+        height: 55px;
+        background-color: rgb(118, 121, 118);
+        
+    }
+    .tab{
+        height: 457px;
+        background-color: rgb(187, 188, 187);
+    }
+    .ho{
+        color: aliceblue;
+        padding: 12px;
+        font-weight: 500;
+    }
+</style>
+<body>
+    <header class="sticky-top">
+        <ul>
+            <li class="imgs">
+            <img src="/photo/9f5973a603f6d5015ea0e5f2446ee115.jpg" height="60px" width="100px">
+            </li>
+            <li>
+                <h1><b>CRM</b></h1>
+            </li>
+            <li>  
+            <div class="input-group flex-nowrap input-group-sm">
+                    <span class="input-group-text" id="addon-wrapping"><i class="bi-1 bi-search"></i></span>
+                    <input type="text" class="form-control searc" placeholder="Search all data....." aria-label="Username" aria-describedby="addon-wrapping">
+            </div>
+            </li>
+            
+            <div class="buton">
+            <li>
+            <i class="bi bi-plus-square-fill"></i>
+            <div class="add">
+                <ul>
+                    <li class="addcont" >
+                        <div id="addcont"><i class="bi-2 bi-person-vcard-fill"></i>  Add New Contact</div>
+                    </li>
+                    <li>
+                        <div id="addor"><i class="bi-2 bi-buildings-fill"></i>  Add New Organization</div>
+                    </li>
+                    <li>
+                        <div><i class="bi-2 bi-envelope-fill"></i>  Send Email</div>
+                    </li>
+                    <li>
+                        <div><i class="bi-2 bi-calendar2-event-fill"></i>  Add New Event</div>
+                    </li>
+                </ul>
+            </li>
+            </div>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <li class="buton-2">
+            <a href="#"><i class="bi bi-bell-fill "></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </li>
+            <li class="buton-2">
+            <a href="#"><i class="bi bi-person-circle"></i></a>
+            </li>
+            </div>
+        </ul>
+    </header>
+        <div class="bar">
+            <div class="menu">
+                <div class="sub-menu">
+                    <a href="home.html"><input type="button" class="home" value="Home"></a>
+                </div>
+                <div class="sub-menu">
+                    <a href="contact.html"><input type="button" class="home" value="Contact"></a>
+                </div>
+                <div class="sub-menu">
+                    <a href="organization.html"><input type="button" class="home" value="Organization"></a>
+                </div>
+                <div class="sub-menu">
+                    <a href="#"><input type="button" class="home" value="Email"></a>
+                </div>
+                <div class="sub-menu">
+                    <a href="#"><input type="button" class="home" value="Calendar"></a>
+                </div>
+            </div>
+            <div class="cont">
+                <div class="nav">
+                    <div class="ho">
+                        Home
+                    </div>
+                </div>
+                <div class="tab">
+                    graph
+                </div>
+            </div>
+        </div>
+        <div id="myModal" class="modal">
+            <span class="close" id="closeModal1">&times;</span>
+            
+            <h2 align="center">Add New Contact</h2><br>
+            <form id="contactForm">
+                
+                <div class="textarea">
+                    <label for="fname">First Name</label>
+                    <input type="text" id="fname" name="fname" placeholder="Enter First Name" required>
+                </div>
+                
+                <div class="textarea">
+                    <label for="lname">Last Name</label>
+                    <input type="text" id="lname" name="lname" placeholder="Enter Last Name" required>
+                </div>
+                
+                <div class="textarea">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" placeholder="Enter Email" required>
+                </div>
+                
+                <div class="textarea">
+                    <label for="dob">Date of Birth</label>
+                    <input type="date" id="dob" name="dob" required>
+                </div>
+        
+                <div class="textarea">
+                    <label for="phone">Phone No.</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter Phone No" required>
+                </div>
+                
+                <div class="textarea">
+                    <label for="linkedin">LinkedIn</label>
+                    <input type="text" id="linkedin" name="linkedin" placeholder="Enter LinkedIn Profile">
+                </div>
+    
+                <div class="textarea">
+                    <label for="fb">Facebook</label>
+                    <input type="text" id="fb" name="fb" placeholder="Enter Facebook Profile">
+                </div>
+    
+                <div class="textarea">
+                    <label for="twit">Twitter</label>
+                    <input type="text" id="twit" name="twit" placeholder="Enter Twitter Profile">
+                </div>
+    
+                <div class="textarea">
+                    <label for="address">Address</label>
+                    <textarea id="address" name="address" placeholder=" Enter Address" required></textarea>
+                </div>
+                
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                    
+                    <button type="button" class="btn btn-outline-primary" id="saveAndNew1">Save & New</button>
+                    <button type="submit" class="btn btn-outline-success btn-lg">Save</button>
+                </div>
+            </form>
+        </div>
+        <div id="myModa" class="modal">
+            <span class="close" id="closeModal2">&times;</span>
+            
+            <h2 align="center">Add New Organization</h2><br>
+            <form id="OrgForm">
+                
+                <div class="textarea">
+                    <label for="fname">Organization Name</label>
+                    <input type="text" id="oname" name="oname" placeholder="Enter Organization Name" required>
+                </div>
+                
+                <div class="textarea">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" placeholder="Enter Email" required>
+                </div>
+                
+                <div class="textarea">
+                    <label for="dob">Date of Birth</label>
+                    <input type="date" id="dob" name="dob" required>
+                </div>
+        
+                <div class="textarea">
+                    <label for="phone">Phone No.</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter Phone No" required>
+                </div>
+                
+                <div class="textarea">
+                    <label for="linkedin">LinkedIn</label>
+                    <input type="text" id="linkedin" name="linkedin" placeholder="Enter LinkedIn Profile">
+                </div>
+    
+                <div class="textarea">
+                    <label for="fb">Facebook</label>
+                    <input type="text" id="fb" name="fb" placeholder="Enter Facebook Profile">
+                </div>
+    
+                <div class="textarea">
+                    <label for="twit">Twitter</label>
+                    <input type="text" id="twit" name="twit" placeholder="Enter Twitter Profile">
+                </div>
+    
+                <div class="textarea">
+                    <label for="address">Address</label>
+                    <textarea id="address" name="address" placeholder=" Enter Address" required></textarea>
+                </div>
+                
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                    
+                    <button type="button" class="btn btn-outline-primary" id="saveAndNew2">Save & New</button>
+                    <button type="submit" class="btn btn-outline-success btn-lg">Save</button>
+                </div>
+            </form>
+        </div>
+        <script>
+            const modal = document.getElementById('myModal');
+            const moda = document.getElementById('myModa');
+            const closeModal1 = document.getElementById('closeModal1');
+            const closeModal2 = document.getElementById('closeModal2');
+            const contactForm = document.getElementById('contactForm');
+            const OrganizationForm = document.getElementById('OrgForm');
+            const saveAndNewButton1 = document.getElementById('saveAndNew1');
+            const saveAndNewButton2 = document.getElementById('saveAndNew2');
+            
+            const addContactLi = document.getElementById('addcont');
+            
+            const addorgLi = document.getElementById('addor');
+    
+            function openModal1() {
+                modal.style.display = 'block';
+            }
+    
+            function closeModalFunction1() {
+                modal.style.display = 'none';
+            }
+
+            function openModal2() {
+                moda.style.display = 'block';
+            }
+    
+            function closeModalFunction2() {
+                moda.style.display = 'none';
+            }
+    
+            function validateForm1(event) {
+                const firstName = document.getElementById('fname').value;
+                const lastName = document.getElementById('lname').value;
+                const email = document.getElementById('email').value;
+                const phone = document.getElementById('phone').value;
+                const linkedin = document.getElementById('linkedin').value;
+                const fb = document.getElementById('fb').value;
+                const twit = document.getElementById('twit').value;
+    
+                if (!firstName || !lastName || !email || !phone) {
+                    alert('Please fill in all required fields.');
+                    event.preventDefault(); 
+                }
+                if (phone.length < 11) {
+                    alert('Enter Valid Phone Number');
+                    event.preventDefault(); 
+                }
+                if (!isValidEmail(email)) {
+                    alert('Enter a valid email address.');
+                    event.preventDefault(); 
+                } 
+                if (linkedin && !isValidURL(linkedin)) {
+                    alert('Enter a valid website link.');
+                    event.preventDefault(); 
+                }
+                if (fb && !isValidURL(fb)) {
+                    alert('Enter a valid website link.');
+                    event.preventDefault(); 
+                }
+                if (twit && !isValidURL(twit)) {
+                    alert('Enter a valid website link.');
+                    event.preventDefault(); 
+                }
+            }
+            function validateForm2(event) {
+                const oName = document.getElementById('oname').value;
+                const email = document.getElementById('email').value;
+                const phone = document.getElementById('phone').value;
+                const linkedin = document.getElementById('linkedin').value;
+                const fb = document.getElementById('fb').value;
+                const twit = document.getElementById('twit').value;
+    
+                if (!oName || !email || !phone) {
+                    alert('Please fill in all required fields.');
+                    event.preventDefault(); 
+                }
+                if (phone.length < 11) {
+                    alert('Enter Valid Phone Number');
+                    event.preventDefault(); 
+                }
+                if (!isValidEmail(email)) {
+                    alert('Enter a valid email address.');
+                    event.preventDefault(); 
+                } 
+                if (linkedin && !isValidURL(linkedin)) {
+                    alert('Enter a valid website link.');
+                    event.preventDefault(); 
+                }
+                if (fb && !isValidURL(fb)) {
+                    alert('Enter a valid website link.');
+                    event.preventDefault(); 
+                }
+                if (twit && !isValidURL(twit)) {
+                    alert('Enter a valid website link.');
+                    event.preventDefault(); 
+                }
+            }
+            function isValidEmail(email) {
+                const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+                return emailPattern.test(email);
+            }
+            function isValidURL(url) {
+                const urlPattern = /^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$/i;
+                return urlPattern.test(url);
+            }
+            addContactLi.addEventListener('click', openModal1);
+            closeModal1.addEventListener('click', closeModalFunction1);
+            contactForm.addEventListener('submit',validateForm1);
+            addorgLi.addEventListener('click', openModal2);
+            closeModal2.addEventListener('click', closeModalFunction2);
+            OrganizationForm.addEventListener('submit',validateForm2);
+            
+        </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+body{
+    background-image: url("https://i.pinimg.com/564x/c3/1b/84/c31b84b0e3ed7113c9b447c86cf5701c.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+.center{
+    width: 410px;
+    height: 380px;
+    background-color: rgba(0, 0, 0, 0.2);
+    position: absolute;
+    margin-left: 410px;
+    margin-top: 100px;
+    border-radius: 20px;
+    padding-top: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: left;
+    color: rgb(10, 0, 0);
+    font-family: 'Times New Roman', Times, serif;
+}
+#btn{
+    color: aliceblue;
+}
+#forgot{
+    border: none;
+    background-color: rgb(242, 242, 242,0.0);
+    color: rgba(224, 12, 26, 0.648);
+    font-weight: bold;
+}
+#submit{
+    text-align: center;
+    font-size: 25px;
+    font-weight: bolder;
+    border-width: 2px;
+}
